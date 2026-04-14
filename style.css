@@ -1,6 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     margin: 0;
 }
 
@@ -133,12 +133,13 @@ nav a:hover {
 
 .slider{
     position: relative;
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     height: 450px;
     margin: auto;
     border-radius: 12px;
     overflow: hidden;
-    border: 3px solid rgb(43, 136, 0);
+    border: 5px solid rgb(43, 136, 0);
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
@@ -180,6 +181,11 @@ nav a:hover {
 #s3:checked ~ .slides{ transform:translateX(-200%); }
 #s4:checked ~ .slides{ transform:translateX(-300%); }
 #s5:checked ~ .slides{ transform:translateX(-400%); }
+#s6:checked ~ .slides{ transform:translateX(-500%); }
+#s7:checked ~ .slides{ transform:translateX(-600%); }
+#s8:checked ~ .slides{ transform:translateX(-700%); }
+#s9:checked ~ .slides{ transform:translateX(-800%); }
+#s10:checked ~ .slides{ transform:translateX(-900%); }
 
 .setas label{
     position:absolute;
@@ -200,6 +206,11 @@ nav a:hover {
 #s3:checked ~ .setas .s3{ display:block; }
 #s4:checked ~ .setas .s4{ display:block; }
 #s5:checked ~ .setas .s5{ display:block; }
+#s6:checked ~ .setas .s6{ display:block; }
+#s7:checked ~ .setas .s7{ display:block; }
+#s8:checked ~ .setas .s8{ display:block; }
+#s9:checked ~ .setas .s9{ display:block; }
+#s10:checked ~ .setas .s10{ display:block; }
 
 .card-processo{
     background-color: rgba(255, 255, 255, 0.8);
@@ -257,7 +268,8 @@ form input, form textarea {
     font-family: inherit;
     font-size: 1rem;
     resize: vertical;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
 }
 
 form button {
@@ -287,4 +299,24 @@ footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+}
+
+@media (max-width: 768px){
+    .texto-footer{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .card-sobre{
+        margin: 15px;
+    }
+    .container-sobre{
+        flex-direction: column;
+    }
+    .card-cursos{
+        grid-template-columns: 1fr;
+    }
+    form{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
 }
